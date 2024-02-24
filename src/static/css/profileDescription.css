@@ -1,0 +1,14 @@
+.user-section .background-opacity {
+    height: 21rem;
+    margin-top: -23rem;
+    background-color: #3533cd;
+    z-index: -2;
+}
+
+.user-section .circle {
+    width: 18rem;
+    height: 18rem;
+    margin-left: 72px;
+    margin-top: 46px;
+    z-index: -1;
+}
