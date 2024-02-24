@@ -7,7 +7,7 @@ import iconFormValidator from '../static/img/form-validator.png';
 
 const Project = (): JSX.Element => {
     return(
-        <section id="project" className="container-sm d-flex flex-column mt-5">
+        <section id="project" className="container-sm d-flex flex-column mt-3">
             <div className="background-projects"></div>
             <h1 className="d-flex justify-content-center">Projetos</h1>
             <div className="d-flex text-dark mt-4">
@@ -18,7 +18,7 @@ const Project = (): JSX.Element => {
                             <a href="https://github.com/DiogoMEng/contactDirectory">Contact Book</a>
                         </h3>
                     </div>
-                    <p className="text-justify mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolores iste quam repellendus numquam esse repudiandae non ipsa, illum tempora sequi natus, ut laboriosam ducimus ullam, quisquam aliquid ipsam ipsum.</p>
+                    <p className="text-justify mt-1">A agenda de contatos é uma aplicação web que permite aos usuários armazenar, gerenciar e organizar informações de contatos. Os usuários podem adicionar, editar, visualizar e excluir contatos, além de adicionar notas.</p>
                     <span className="bg-success p-1 rounded text-light font-weight-bold">Status - Finalizado</span>
                     <h6 className="border-bottom mt-4">Tecnologias</h6>
                     <ul className="skills d-flex position-relative">
@@ -31,14 +31,14 @@ const Project = (): JSX.Element => {
                         <li className="ml-2"><img src="https://skillicons.dev/icons?i=bootstrap" width={35} height={35} alt="Bootstrap" title="Bootstrap"/></li>
                     </ul>
                 </div>
-                <div className="rounded w-50 bg-light ml-5 mr-5 p-3">
+                <div className="rounded w-50 h-25 bg-light ml-5 mr-5 p-3">
                     <div className="d-flex align-items-center">
                         <img src={iconStudentRegistration} width={50} height={50} alt="javascript icon"/>
                         <h3 className="ml-3">
                             <a href="https://github.com/DiogoMEng/student-registration">Student Registration</a>
                         </h3>
                     </div>
-                    <p className="text-justify mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet vitae incidunt distinctio, voluptas voluptatum iste numquam repellat id harum eos sequi excepturi omnis totam porro qui mollitia quo consequatur enim.</p>
+                    <p className="text-justify mt-1">Um sistema de cadastro de alunos é uma plataforma que permite aos usuários criar e gerenciar suas contas de aluno. Os alunos podem se cadastrar na plataforma, fornecendo informações como nome, email e senha. Eles também têm a capacidade de excluir suas contas, caso desejem. Além disso, o sistema utiliza <b>JsonWebTokens</b> (JWT) para gerenciar o fluxo de rotas, autenticando e autorizando o acesso dos alunos às diferentes funcionalidades da aplicação de forma segura e eficiente.</p>
                     <span className="bg-warning p-1 rounded text-light font-weight-bold">Status - Em Aprimoramento</span>
                     <h6 className="border-bottom mt-4">Tecnologias</h6>
                     <ul className="skills d-flex position-relative">
@@ -58,7 +58,7 @@ const Project = (): JSX.Element => {
                             <a href="https://github.com/DiogoMEng/Pomodoro-Timer">Pomodoro Timer</a>
                         </h3>
                     </div>
-                    <p className="text-justify mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolores iste quam repellendus numquam esse repudiandae non ipsa, illum tempora sequi natus, ut laboriosam ducimus ullam, quisquam aliquid ipsam ipsum.</p>
+                    <p className="text-justify mt-1">Uma aplicação web de técnica de pomodoro é um cronômetro que ajuda na produtividade. Por meio de períodos definidos de trabalho e descanso, com alarmes para marcar o início e o fim de cada fase.</p>
                     <span className="bg-success p-1 rounded text-light font-weight-bold">Status - Finalizado</span>
                     <h6 className="border-bottom mt-4">Tecnologias</h6>
                     <ul className="skills d-flex position-relative">
@@ -76,7 +76,7 @@ const Project = (): JSX.Element => {
                             <a href="https://github.com/DiogoMEng/formValidator">Form Validator</a>
                         </h3>
                     </div>
-                    <p className="text-justify mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet vitae incidunt distinctio, voluptas voluptatum iste numquam repellat id harum eos sequi excepturi omnis totam porro qui mollitia quo consequatur enim.</p>
+                    <p className="text-justify mt-1">Um validador de formulário é uma aplicação que verifica as entradas do usuário em campos de formulário, garantindo que estejam corretas e dentro dos critérios definidos. Ele identifica campos obrigatórios não preenchidos e verifica se os dados estão no formato adequado (como endereços de e-mail válidos, números de telefone corretos, etc.)</p>
                     <span className="bg-success p-1 rounded text-light font-weight-bold">Status - Finalizado</span>
                     <h6 className="border-bottom mt-4">Tecnologias</h6>
                     <ul className="skills d-flex position-relative">

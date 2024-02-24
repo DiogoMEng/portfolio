@@ -19,7 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,                                 /* Skip type checking all .d.ts files. */
-    "outDir": "./build"
+    "outDir": "./dist"
   },
   "include": [
     "./src"

@@ -8,7 +8,7 @@ const NavBar = (): JSX.Element => {
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <img src={logo} alt="" width="50" height="50" className="d-inline-block align-text-center" />
-                        Portfolio
+                        <span>Portfolio</span>
                     </a>
                 </div>
 
