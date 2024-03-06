@@ -3,6 +3,8 @@ import '../../static/css/profileDescription.css'
 import perfil from '../../static/img/perfil.jpeg';
 
 const ProfileDescription = (): JSX.Element => {
+    const currentData = new Date();
+
     return(
         <section className="user-section container">
 
@@ -13,7 +15,7 @@ const ProfileDescription = (): JSX.Element => {
                     <h2>Olá, me chamo Diogo Mello</h2>
                     <h6 className="p-1 mb-3 bg-light text-dark border rounded">Desenvolvedor Back-end</h6>
                     <p>
-                    Tenho 22 anos e estou atualmente cursando Engenharia da Computação. Desde os primeiros semestres da faculdade, fui cativado pelo mundo da programação e do desenvolvimento de software. Minha paixão por desenvolvimento começou com os primeiros códigos em C e C++, e desde então venho explorando diferentes linguagens e tecnologias. A capacidade de criar sistemas robustos e escaláveis que impulsionam as aplicações para frente é algo que me fascina profundamente no desenvolvimento Back-end. Ao longo dos anos, venho aprimorando as minhas habilidades técnicas e desenvolvendo uma compreensão sólida dos princípios fundamentais de engenharia de software. Estou constantemente buscando aprender e me desafiar, sempre em busca de novos conhecimentos e habilidades que possam contribuir para o meu crescimento profissional.
+                    Tenho {currentData.getFullYear() - 2002} anos e estou atualmente cursando Engenharia da Computação. Desde os primeiros semestres da faculdade, fui cativado pelo mundo da programação e do desenvolvimento de software. Minha paixão por desenvolvimento começou com os primeiros códigos em C e C++, e desde então venho explorando diferentes linguagens e tecnologias. A capacidade de criar sistemas robustos e escaláveis que impulsionam as aplicações para frente é algo que me fascina profundamente no desenvolvimento Back-end. Ao longo dos anos, venho aprimorando as minhas habilidades técnicas e desenvolvendo uma compreensão sólida dos princípios fundamentais de engenharia de software. Estou constantemente buscando aprender e me desafiar, sempre em busca de novos conhecimentos e habilidades que possam contribuir para o meu crescimento profissional.
                     </p>
                     
                     {/* redes sociais */}
