@@ -1,5 +1,5 @@
-import '../static/css/navbar.css'
-import logo from '../static/img/logo.png'
+import '../../static/css/navbar.css'
+import logo from '../../static/img/logo.png'
 
 const NavBar = (): JSX.Element => {
     return (
@@ -11,11 +11,10 @@ const NavBar = (): JSX.Element => {
                         <span>Portfolio</span>
                     </a>
                 </div>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#project">Projetos</a>
+                <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+                    <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+                        <li className="nav-item">
+                            <a className="nav-link text-light" href="#project">Projetos</a>
                         </li>
                     </ul>
                 </div>
