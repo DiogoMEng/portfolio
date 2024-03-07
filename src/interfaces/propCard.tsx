@@ -1,6 +1,7 @@
 interface PropCard {
     projectName: string;
     projectImg: string;
+    projectLink: string;
     description: string;
     status: string;
     technologies: {
