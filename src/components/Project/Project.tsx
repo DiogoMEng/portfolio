@@ -21,7 +21,7 @@ const Project = (): JSX.Element => {
                     projectImg={iconContactBook}
                     projectLink='https://github.com/DiogoMEng/Contact_Book'
                     description='A agenda de contatos é uma aplicação web que permite aos usuários armazenar, gerenciar e organizar informações de contatos. Os usuários podem adicionar, editar, visualizar e excluir contatos, além de adicionar notas.'
-                    status='Parado'
+                    status='Finalizado'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=javascript", 
