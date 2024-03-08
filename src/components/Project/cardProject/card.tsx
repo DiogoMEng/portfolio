@@ -1,25 +1,28 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
+import { useEffect, useState } from 'react';
 import PropCard from '../../../interfaces/propCard';
 
 function Card (prop: PropCard): JSX.Element {
     const technologies = [];
-    const statusProject = [];
-
+    const [status, setStatus] = useState("bg-success p-1 rounded text-light font-weight-bold");
+    
     for (let i = 0; i < prop.technologies.img.length; i++){
         technologies.push(<li className='ml-2'><img src={prop.technologies.img[i]} width={35} height={35} alt={prop.technologies.alt[i]} title={prop.technologies.title[i]}/></li>)
     }
 
-    switch (prop.status) {
-        case "Finalizado":
-            statusProject.push(<span className="bg-success p-1 rounded text-light font-weight-bold">{prop.status}</span>)
-            break;
-        case "Em Aprimoramento":
-            statusProject.push(<span className="bg-warning p-1 rounded text-light font-weight-bold">{prop.status}</span>)
-            break;
-        case "Parado":
-            statusProject.push(<span className="bg-danger p-1 rounded text-light font-weight-bold">{prop.status}</span>)
-            break;
-    }
+    useEffect(() => {
+        switch(prop.status){
+            case "Status - Em Aprimoramento":
+                setStatus("bg-warning p-1 rounded text-light font-weight-bold");
+                break;
+            case "Status - Parado":
+                setStatus("bg-danger p-1 rounded text-light font-weight-bold");
+                break;
+            default:
+                setStatus("bg-success p-1 rounded text-light font-weight-bold");
+                break;         
+        }
+    }, [prop]);
 
     return (
         <div className="rounded w-50 h-25 bg-light ml-5 mr-5 p-3">
@@ -35,7 +38,7 @@ function Card (prop: PropCard): JSX.Element {
                     <p className="text-justify mt-1">{prop.description}</p>
 
                     {/* status do projeto */}
-                    {statusProject}
+                    <span className={status}>{prop.status}</span>
                     
                     <h6 className="border-bottom mt-4">Tecnologias</h6>
 

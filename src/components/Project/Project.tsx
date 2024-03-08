@@ -21,7 +21,7 @@ const Project = (): JSX.Element => {
                     projectImg={iconContactBook}
                     projectLink='https://github.com/DiogoMEng/Contact_Book'
                     description='A agenda de contatos é uma aplicação web que permite aos usuários armazenar, gerenciar e organizar informações de contatos. Os usuários podem adicionar, editar, visualizar e excluir contatos, além de adicionar notas.'
-                    status='Finalizado'
+                    status='Status - Finalizado'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=javascript", 
@@ -43,7 +43,7 @@ const Project = (): JSX.Element => {
                     projectImg={iconStudentRegistration}
                     projectLink='https://github.com/DiogoMEng/student-registration'
                     description='Um sistema de cadastro de alunos é uma plataforma que permite aos usuários criar e gerenciar suas contas de aluno. Os alunos podem se cadastrar na plataforma, fornecendo informações como nome, email e senha. Eles também têm a capacidade de excluir suas contas, caso desejem. Além disso, o sistema utiliza <b>JsonWebTokens</b> (JWT) para gerenciar o fluxo de rotas, autenticando e autorizando o acesso dos alunos às diferentes funcionalidades da aplicação de forma segura e eficiente.'
-                    status='Em Aprimoramento'
+                    status='Status - Em Aprimoramento'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=javascript", 
@@ -67,7 +67,7 @@ const Project = (): JSX.Element => {
                     projectImg={iconPomodoroTimer}
                     projectLink='https://github.com/DiogoMEng/Pomodoro-Timer'
                     description='Uma aplicação web de técnica de pomodoro é um cronômetro que ajuda na produtividade. Por meio de períodos definidos de trabalho e descanso, com alarmes para marcar o início e o fim de cada fase.'
-                    status='Finalizado'
+                    status='Status - Finalizado'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=typescript", 
@@ -86,7 +86,7 @@ const Project = (): JSX.Element => {
                     projectImg={iconFormValidator}
                     projectLink='https://github.com/DiogoMEng/formValidator'
                     description='Um validador de formulário é uma aplicação que verifica as entradas do usuário em campos de formulário, garantindo que estejam corretas e dentro dos critérios definidos. Ele identifica campos obrigatórios não preenchidos e verifica se os dados estão no formato adequado (como endereços de e-mail válidos, números de telefone corretos, etc.)'
-                    status='Finalizado'
+                    status='Status - Finalizado'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=typescript", 
