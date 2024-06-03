@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "start": "npx tailwindcss -i ./src/static/style.css -o ./src/static/css/style.css",
+    "css": "npx tailwindcss -i ./src/static/main_style.css -o ./src/static/css/style.css -w",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

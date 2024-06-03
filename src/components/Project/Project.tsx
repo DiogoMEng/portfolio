@@ -1,5 +1,3 @@
-import '../../static/css/project.css';
-
 import iconContactBook from '../../static/img/contact-book.png';
 import iconStudentRegistration from '../../static/img/student-registration.png';
 import iconPomodoroTimer from '../../static/img/pomodoro-timer.png';

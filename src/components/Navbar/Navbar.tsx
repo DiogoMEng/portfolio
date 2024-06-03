@@ -3,22 +3,17 @@ import logo from '../../static/img/logo.png'
 const NavBar = (): JSX.Element => {
     return (
         <nav className="flex items-center justify-between px-5 bg-black text-white">
-            {/* <!-- LOGO --> */}
-            <div className="logo">Green Route</div>
+            <div className="flex items-center text-3xl"><img src={logo} alt="logo do site" width={70} height={70} />Portfolio</div>
 
-            {/* <!-- LINKS --> */}
             <div>
-                    {/* <!-- NAVEGAÇÃO MENU --> */}
                     <ul className="nav-links">
-                        {/* <!-- CHECKBOX --> */}
-                        <input type="checkbox" id="checkbox_toggle" />
-                        <label htmlFor="checkbox_toggle" className="hamburger">&#9776; </label>
-                        {/* <!-- NAVEGAÇÃO MENUS --> */}
-                        <div className="menu">
-                            <li><a href="/ways/">Início</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Serviços</a></li>
-                            <li><a href="#">Contato</a></li>
+                        <input className='hidden' type="checkbox" id="checkbox_toggle"/>
+                        <label htmlFor="checkbox_toggle" className="hidden text-2xl max-md:block">&#9776; </label>
+                        <div className="menu flex gap-4 text-lg max-md:hidden max-md:absolute max-md:bg-black max-md:inset-x-0 max-md:text-center max-md:py-4 max-md:px-0">
+                            <li className='py-1 px-3.5 hover:bg-slate-200 duration-700 max-md:hover:inline-block max-md:mt-3'><a href="#">Início</a></li>
+                            <li className='py-1 px-3.5 hover:bg-slate-200 duration-700 max-md:hover:inline-block max-md:mt-3'><a href="#">Sobre</a></li>
+                            <li className='py-1 px-3.5 hover:bg-slate-200 duration-700 max-md:hover:inline-block max-md:mt-3'><a href="#">Serviços</a></li>
+                            <li className='py-1 px-3.5 hover:bg-slate-200 duration-700 max-md:hover:inline-block max-md:mt-3'><a href="#">Contato</a></li>
                         </div>
                     </ul>
             </div>

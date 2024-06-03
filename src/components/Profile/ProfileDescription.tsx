@@ -1,5 +1,3 @@
-import '../../static/css/profileDescription.css'
-
 import perfil from '../../static/img/perfil.jpg';
 
 const ProfileDescription = (): JSX.Element => {

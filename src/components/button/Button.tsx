@@ -1,5 +1,3 @@
-import '../../static/css/button.css'
-
 import returnStart from '../../static/img/voltar-menu.png';
 
 const Button = (): JSX.Element => {
