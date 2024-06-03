@@ -2,7 +2,7 @@ import logo from '../../static/img/logo.png'
 
 const NavBar = (): JSX.Element => {
     return (
-        <nav className="flex items-center justify-between px-5 bg-black text-white">
+        <nav className="flex bg-gradient-to-r from-[#000000] to-[#1a18a4] items-center justify-between px-5 text-white">
             <div className="flex items-center text-3xl"><img src={logo} alt="logo do site" width={70} height={70} />Portfolio</div>
 
             <div>
