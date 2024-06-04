@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar {
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 35%, rgba(53,51,205,1) 100%);
+body {
+    color: #fdfdfd;
+    background-color: #1a18a4;
+    height: 100vh;
 }
 
 @media (max-width: 768px) {

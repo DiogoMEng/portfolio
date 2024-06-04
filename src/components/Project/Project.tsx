@@ -1,25 +1,19 @@
-import iconContactBook from '../../static/img/contact-book.png';
-import iconStudentRegistration from '../../static/img/student-registration.png';
-import iconPomodoroTimer from '../../static/img/pomodoro-timer.png';
-import iconFormValidator from '../../static/img/form-validator.png';
 import Card from './cardProject/card';
 
 const Project = (): JSX.Element => {
     return(
-        <section id="project" className="container-sm d-flex flex-column mt-3">
-            <div className="background-projects"></div>
-            <h1 className="d-flex justify-content-center">Projetos</h1>
+        <section className="w-full pt-5 pb-10 bg-white">
+            <h1 className="mb-6 text-3xl text-center font-bold text-[#1a18a4]">Projetos</h1>
 
             {/* card de projetos - fila 1 */}
-            <div className="d-flex text-dark mt-4">
+            <div className="grid grid-cols-2 gap-x-2">
 
                 {/* projeto 1 */}
                 <Card
                     projectName='Contact Book'
-                    projectImg={iconContactBook}
                     projectLink='https://github.com/DiogoMEng/Contact_Book'
                     description='A agenda de contatos é uma aplicação web que permite aos usuários armazenar, gerenciar e organizar informações de contatos. Os usuários podem adicionar, editar, visualizar e excluir contatos, além de adicionar notas.'
-                    status='Status - Finalizado'
+                    status='Status - Parado'
                     technologies={{
                         img: [
                             "https://skillicons.dev/icons?i=javascript", 
@@ -38,7 +32,6 @@ const Project = (): JSX.Element => {
                 {/* projeto 2 */}
                 <Card
                     projectName='Student Registration'
-                    projectImg={iconStudentRegistration}
                     projectLink='https://github.com/DiogoMEng/student-registration'
                     description='Um sistema de cadastro de alunos é uma plataforma que permite aos usuários criar e gerenciar suas contas de aluno. Os alunos podem se cadastrar na plataforma, fornecendo informações como nome, email e senha. Eles também têm a capacidade de excluir suas contas, caso desejem. Além disso, o sistema utiliza <b>JsonWebTokens</b> (JWT) para gerenciar o fluxo de rotas, autenticando e autorizando o acesso dos alunos às diferentes funcionalidades da aplicação de forma segura e eficiente.'
                     status='Status - Em Aprimoramento'
@@ -57,12 +50,11 @@ const Project = (): JSX.Element => {
             </div>
 
             {/* card de projetos - fila 2 */}
-            <div className="d-flex text-dark mt-4">
+            <div className="mt-5 grid grid-cols-2 gap-x-2">
                 
                 {/* projeto 3 */}
                 <Card
                     projectName='Pomodoro Timer'
-                    projectImg={iconPomodoroTimer}
                     projectLink='https://github.com/DiogoMEng/Pomodoro-Timer'
                     description='Uma aplicação web de técnica de pomodoro é um cronômetro que ajuda na produtividade. Por meio de períodos definidos de trabalho e descanso, com alarmes para marcar o início e o fim de cada fase.'
                     status='Status - Finalizado'
@@ -81,7 +73,6 @@ const Project = (): JSX.Element => {
                 {/* projeto 4 */}
                 <Card
                     projectName='Form Validator'
-                    projectImg={iconFormValidator}
                     projectLink='https://github.com/DiogoMEng/formValidator'
                     description='Um validador de formulário é uma aplicação que verifica as entradas do usuário em campos de formulário, garantindo que estejam corretas e dentro dos critérios definidos. Ele identifica campos obrigatórios não preenchidos e verifica se os dados estão no formato adequado (como endereços de e-mail válidos, números de telefone corretos, etc.)'
                     status='Status - Finalizado'

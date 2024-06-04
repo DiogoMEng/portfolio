@@ -10,7 +10,7 @@ const Home = (): JSX.Element => {
       <NavBar />
       <ProfileDescription />
       <Project />
-      <Button />
+      {/* <Button /> */}
     </>
   );
 };

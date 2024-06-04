@@ -13,37 +13,34 @@ function Card (prop: PropCard): JSX.Element {
     useEffect(() => {
         switch(prop.status){
             case "Status - Em Aprimoramento":
-                setStatus("bg-warning p-1 rounded text-light font-weight-bold");
+                setStatus("bg-orange-700 rounded-md p-1");
                 break;
             case "Status - Parado":
-                setStatus("bg-danger p-1 rounded text-light font-weight-bold");
+                setStatus("bg-red-700 rounded-md p-1");
                 break;
             default:
-                setStatus("bg-success p-1 rounded text-light font-weight-bold");
+                setStatus("bg-green-700 rounded-md p-1");
                 break;         
         }
     }, [prop]);
 
     return (
-        <div className="rounded w-50 h-25 bg-light ml-5 mr-5 p-3">
+        <div className="w-3/4 mx-auto bg-[#1a18a4] p-5 rounded-md">
                     {/* imagem e nome do projeto */}
-                    <div className="d-flex align-items-center">
-                        <img src={prop.projectImg} width={50} height={50} alt="javascript icon"/>
-                        <h3 className="ml-3">
-                            <a href={prop.projectLink}>{prop.projectName}</a>
-                        </h3>
-                    </div>
+                    <h3 className='text-center mb-1.5'>
+                        <a className='p-1 bg-white rounded-md text-[#1a18a4]' href={prop.projectLink}>{prop.projectName}</a>
+                    </h3>
 
                     {/* descrição do projeto */}
-                    <p className="text-justify mt-1">{prop.description}</p>
+                    <p className="mb-2 text-justify">{prop.description}</p>
 
                     {/* status do projeto */}
                     <span className={status}>{prop.status}</span>
                     
-                    <h6 className="border-bottom mt-4">Tecnologias</h6>
+                    <div className="my-4"><span className="border-b-2">Tecnologias</span></div>
 
                     {/* tecnologias utilizadas */}
-                    <ul className="skills d-flex position-relative">
+                    <ul className="flex">
                         {technologies}
                     </ul>
         </div>
