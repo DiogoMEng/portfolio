@@ -6,7 +6,7 @@ const Project = (): JSX.Element => {
             <h1 className="mb-6 text-3xl text-center font-bold text-[#1a18a4]">Projetos</h1>
 
             {/* card de projetos - fila 1 */}
-            <div className="grid grid-cols-2 gap-x-2">
+            <div className="grid grid-cols-2 gap-x-2 max-md:grid-cols-1">
 
                 {/* projeto 1 */}
                 <Card
@@ -50,7 +50,7 @@ const Project = (): JSX.Element => {
             </div>
 
             {/* card de projetos - fila 2 */}
-            <div className="mt-5 grid grid-cols-2 gap-x-2">
+            <div className="mt-5 grid grid-cols-2 gap-x-2 max-md:grid-cols-1">
                 
                 {/* projeto 3 */}
                 <Card

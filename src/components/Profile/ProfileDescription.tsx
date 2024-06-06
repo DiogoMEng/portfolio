@@ -6,10 +6,11 @@ const ProfileDescription = (): JSX.Element => {
     return (
         <section className="w-full py-10">
 
-            <article className="flex mx-auto w-9/12 p-5 bg-[#0b097e] rounded-md">
+            <article className="flex mx-auto w-9/12 p-5 bg-[#0b097e] rounded-md items-center justify-items-center max-md:grid max-md:w-10/12">
 
+                <img src={perfil} className="w-1/3 max-sm:w-3/4" alt="user-perfil" />
                 {/* descrição de perfil */}
-                <div className="w-2/3">
+                <div className="w-2/3 max-md:w-5/6">
                     <h2 className="text-3xl text-center font-bold">Olá, me chamo Diogo Mello</h2>
                     <h3 className="text-center"><span className="text-xl inline-block mb-3 border-solid border-b-2">Desenvolvedor Back-end</span></h3>
                     <p className="text-justify">
@@ -24,11 +25,6 @@ const ProfileDescription = (): JSX.Element => {
                     </div>
                 </div>
 
-                {/* imagem de perfil */}
-                <div className='mt-5'>
-                    <img src={perfil} width={300} height={300} className="float-right rounded-circle m-5" alt="user-perfil" />
-                    <div className="circle rounded-circle bg-light position-relative"></div>
-                </div>
             </article>
         </section>
     )

@@ -25,7 +25,7 @@ function Card (prop: PropCard): JSX.Element {
     }, [prop]);
 
     return (
-        <div className="w-3/4 mx-auto bg-[#1a18a4] p-5 rounded-md">
+        <div className="w-3/4 mx-auto bg-[#1a18a4] p-5 rounded-md max-md:mb-5 max-md:p-5">
                     {/* imagem e nome do projeto */}
                     <h3 className='text-center mb-1.5'>
                         <a className='p-1 bg-white rounded-md text-[#1a18a4]' href={prop.projectLink}>{prop.projectName}</a>

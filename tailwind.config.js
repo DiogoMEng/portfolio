@@ -4,9 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {},
-      backgroundImage: {
-        'skill_background': "url(./src/static/img/background-habilidades.png)"
-      }
     },
   },
   plugins: [],
