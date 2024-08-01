@@ -1,6 +1,6 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useState } from 'react';
-import PropCard from '../../../interfaces/propCard';
+import PropCard from '../interfaces/propCard';
 
 function Card (prop: PropCard): JSX.Element {
     const technologies = [];
@@ -25,24 +25,26 @@ function Card (prop: PropCard): JSX.Element {
     }, [prop]);
 
     return (
-        <div className="w-3/4 mx-auto bg-[#1a18a4] p-5 rounded-md max-md:mb-5 max-md:p-5">
-                    {/* imagem e nome do projeto */}
-                    <h3 className='text-center mb-1.5'>
-                        <a className='p-1 bg-white rounded-md text-[#1a18a4]' href={prop.projectLink}>{prop.projectName}</a>
-                    </h3>
+        <div className="w-4/5 mx-auto bg-[#1a18a4] p-5 rounded-md max-md:mb-5 max-md:p-5">
+            <div>
+                {/* imagem e nome do projeto */}
+                <h3 className='text-center mb-1.5'>
+                    <a className='p-1 bg-white rounded-md text-[#1a18a4]' href={prop.projectLink}>{prop.projectName}</a>
+                </h3>
 
-                    {/* descrição do projeto */}
-                    <p className="mb-2 text-justify">{prop.description}</p>
+                {/* descrição do projeto */}
+                <p className="mb-2 text-justify">{prop.description}</p>
 
-                    {/* status do projeto */}
-                    <span className={status}>{prop.status}</span>
-                    
-                    <div className="my-4"><span className="border-b-2">Tecnologias</span></div>
+                {/* status do projeto */}
+                <span className={status}>{prop.status}</span>
+                        
+                <div className="my-4"><span className="border-b-2">Tecnologias</span></div>
 
-                    {/* tecnologias utilizadas */}
-                    <ul className="flex">
-                        {technologies}
-                    </ul>
+                {/* tecnologias utilizadas */}
+                <ul className="flex">
+                    {technologies}
+                </ul>
+            </div>
         </div>
     );
 }

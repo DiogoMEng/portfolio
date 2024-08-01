@@ -564,6 +564,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -592,16 +602,20 @@ video {
   margin-left: 0.75rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
+.block {
+  display: block;
 }
 
 .inline-block {
@@ -622,6 +636,14 @@ video {
 
 .h-\[calc\(100vh-70px-24px\)\] {
   height: calc(100vh - 70px - 24px);
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .w-1\/3 {
@@ -652,12 +674,28 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -711,6 +749,11 @@ video {
   background-color: rgb(26 24 164 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#5755e2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 85 226 / var(--tw-bg-opacity));
+}
+
 .bg-green-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
@@ -731,11 +774,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#5755e2\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(87 85 226 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -754,12 +792,12 @@ video {
   padding: 0.25rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-3 {
@@ -835,11 +873,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#5755e2\] {
-  --tw-text-opacity: 1;
-  color: rgb(87 85 226 / var(--tw-text-opacity));
 }
 
 .duration-700 {
