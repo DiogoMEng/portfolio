@@ -25,7 +25,7 @@ function Card (prop: PropCard): JSX.Element {
     }, [prop]);
 
     return (
-        <div className="w-4/5 mx-auto bg-[#1a18a4] p-5 rounded-md max-md:mb-5 max-md:p-5">
+        <div className="w-4/5 mx-auto bg-[#1a18a4] p-5 rounded-md max-md:w-full max-md:mb-5 max-md:p-5">
             <div>
                 {/* imagem e nome do projeto */}
                 <h3 className='text-center mb-1.5'>

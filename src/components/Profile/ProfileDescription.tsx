@@ -1,7 +1,32 @@
+import { useEffect, useState } from 'react';
 import perfil from '../../static/img/perfil.png';
 
 const ProfileDescription = (): JSX.Element => {
+    const [knowMore, setKnowMore] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
     const currentData = new Date();
+
+    function handleKnowMoreToggle (): void {
+        
+        setKnowMore(!knowMore);
+
+    }
+
+    useEffect(() => {
+
+        const handleResize = (): void => {
+            setIsSmallScreen(window.innerWidth <= 768);
+        }
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+
+    }, []);
 
     return (
         <section className="w-full py-10">
@@ -14,8 +39,17 @@ const ProfileDescription = (): JSX.Element => {
                     <h2 className="text-3xl text-center font-bold">Olá, me chamo Diogo Mello</h2>
                     <h3 className="text-center"><span className="text-xl inline-block mb-3 border-solid border-b-2">Desenvolvedor Back-end</span></h3>
                     <p className="text-justify">
-                        Tenho {currentData.getFullYear() - 2002} anos e estou atualmente cursando Engenharia da Computação. Desde os primeiros semestres da faculdade, fui cativado pelo mundo da programação e do desenvolvimento de software. Minha paixão por desenvolvimento começou com os primeiros códigos em C e C++, e desde então venho explorando diferentes linguagens e tecnologias. A capacidade de criar sistemas robustos e escaláveis que impulsionam as aplicações para frente é algo que me fascina profundamente no desenvolvimento Back-end. Ao longo dos anos, venho aprimorando as minhas habilidades técnicas e desenvolvendo uma compreensão sólida dos princípios fundamentais de engenharia de software. Estou constantemente buscando aprender e me desafiar, sempre em busca de novos conhecimentos e habilidades que possam contribuir para o meu crescimento profissional.
+                        Tenho {currentData.getFullYear() - 2002} anos e estou atualmente cursando Engenharia da Computação. Desde os primeiros semestres da faculdade, fui cativado pelo mundo da programação e do desenvolvimento de software. Minha paixão por desenvolvimento começou com os primeiros códigos em C e C++, e desde então venho explorando diferentes linguagens e tecnologias. {(!isSmallScreen || knowMore) && (
+                            <>
+                                A capacidade de criar sistemas robustos e escaláveis que impulsionam as aplicações para frente é algo que me fascina profundamente no desenvolvimento Back-end. Ao longo dos anos, venho aprimorando as minhas habilidades técnicas e desenvolvendo uma compreensão sólida dos princípios fundamentais de engenharia de software. Estou constantemente buscando aprender e me desafiar, sempre em busca de novos conhecimentos e habilidades que possam contribuir para o meu crescimento profissional.  
+                            </>
+                        )}
                     </p>
+                    {isSmallScreen && (
+                        <button className='mb-4 font-bold duration-75 hover:border-b-2 hover:border-solid' onClick={handleKnowMoreToggle}>
+                            {knowMore ? 'Mostrar menos' : 'Mostrar mais'}
+                        </button>
+                    )}
 
                     {/* redes sociais */}
                     <div className="flex justify-center">
