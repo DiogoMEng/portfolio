@@ -1,7 +1,7 @@
-import { Footer } from "../components/Footer/Footer";
-import { NavBar } from "../components/Navbar/Navbar";
-import { ProfileDescription } from "../components/Profile/ProfileDescription";
-import { Project } from "../components/Project/Project";
+import { Footer } from "../components/Footer";
+import { NavBar } from "../components/Navbar";
+import { ProfileDescription } from "../components/ProfileDescription";
+import { Project } from "../components/ProjectList";
 
 const Home = (): JSX.Element => {
   return(

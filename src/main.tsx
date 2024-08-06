@@ -1,28 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { RouterProvider } from 'react-router-dom';
 
-// PAGE
-import { Home } from './pages/home.tsx';
-import { Contact } from './pages/contact.tsx';
+// ROUTES
+import router from './routes';
 
 // CSS
-import './static/css/style.css';
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />
-  },
-  {
-    path: "/contact/",
-    element: <Contact />
-  }
-])
+import './assets/css/style.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -6,6 +6,8 @@ body {
     color: #fdfdfd;
     background-color: #1a18a4;
     height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
 }
 
 @media (max-width: 768px) {

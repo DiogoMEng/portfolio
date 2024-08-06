@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import perfil from '../../static/img/perfil.png';
+import perfil from '../assets/img/perfil.png';
 
 const ProfileDescription = (): JSX.Element => {
     const [knowMore, setKnowMore] = useState(false);
@@ -55,7 +55,6 @@ const ProfileDescription = (): JSX.Element => {
                     <div className="flex justify-center">
                         <a href="https://www.linkedin.com/in/diogo-meng"><img src="https://skillicons.dev/icons?i=linkedin" width={50} height={50} alt="Linkedin" title="Linkedin" /></a>
                         <a className="ml-3" href="https://github.com/DiogoMEng"><img src="https://skillicons.dev/icons?i=github" width={50} height={50} alt="Github" title="Github" /></a>
-                        <a className="ml-3" href="mailto:diogoeng19@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" width={50} height={50} alt="Gmail" title="Gmail" /></a>
                     </div>
                 </div>
 
