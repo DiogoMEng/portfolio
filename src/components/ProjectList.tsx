@@ -1,5 +1,5 @@
-import Card from './cardProject/card';
-import data from './projectData/data';
+import Card from './Project';
+import data from '../config/data';
 
 const Project = (): JSX.Element => {
     return(

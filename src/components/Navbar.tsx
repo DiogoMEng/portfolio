@@ -1,4 +1,4 @@
-import logo from '../../static/img/logo.png'
+import logo from '../assets/img/logo.png'
 
 const NavBar = (): JSX.Element => {
     return (
