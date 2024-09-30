@@ -18,7 +18,7 @@ export const Contact = () => {
     }
 
     return (
-        <section className="min-h-screen relative">
+        <section className="min-h-screen">
             <form onSubmit={sendForm} className="bg-white px-3 py-5 w-2/6 mx-auto mt-10 text-[#1a18a4] rounded-md text-lg max-md:w-11/12">
                 <h1 className="bg-[#1a18a4] w-1/2 mx-auto mb-5 p-2 text-white text-center text-2xl font-bold border-b-2 rounded-md max-md:w-3/4">Entre em Contato</h1>
 
