@@ -1,8 +1,12 @@
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 export const Contact = () => {
+    const [isSending, setIsSending] = useState(false);
+
     const sendForm = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+        event.preventDefault();
+        setIsSending(true);
 
         const form = event.currentTarget;
         const formData = new FormData(form);
@@ -13,8 +17,14 @@ export const Contact = () => {
         });
 
         emailjs.send("service_ouyqiyk", "template_38msjdi", data, "gi_m8CINJrUBloSxu")
-            .then(res => console.log("Mensagem Enviada", res.status))
-            .catch(res => console.log("Erro de Envio", res.status))
+            .then(res => {
+                console.log("Mensagem Enviada", res.status);
+                window.location.reload();
+            })
+            .catch(res => {
+                console.log("Erro de Envio", res.status);
+                setIsSending(false);
+            })
     }
 
     return (
@@ -51,9 +61,17 @@ export const Contact = () => {
                         <textarea className="bg-slate-300 w-3/4 rounded-md p-1 max-md:w-4/5" id="message" name="message" required></textarea>
                     </div>
                 </div>
-                <div className="flex justify-center gap-5 mt-5">
-                    <input className="w-20 p-1 rounded-md font-bold bg-[#5755e2] text-white duration-700 hover:bg-green-600" type="submit" value="Enviar"/>
-                    <input className="w-20 p-1 rounded-md font-bold bg-[#5755e2] text-white duration-700 hover:bg-red-600" type="reset" value="Limpar"/>
+                <div className="flex justify-center text-white gap-5 mt-5">
+                    <input className={`w-28 p-1 rounded-md font-bold bg-[#5755e2] duration-700 ${
+                        isSending 
+                        ? 'bg-[#9E9E9E] text-gray-500 cursor-not-allowed' 
+                        : 'bg-[#5755e2] hover:bg-green-600'
+                    }`} type="submit" value={isSending ? "Enviando..." : "Enviar"} disabled={isSending}/>
+                    <input className={`w-28 p-1 rounded-md font-bold bg-[#5755e2] duration-700 hover:bg-red-600 ${
+                        isSending
+                        ? 'bg-[#9E9E9E] text-gray-500 cursor-not-allowed'
+                        : 'bg-[#5755e2] hover:bg-red-600'
+                    }`} type="reset" value="Limpar" disabled={isSending}/>
                 </div>
             </form>
         </section>
