@@ -2,6 +2,25 @@ import PropCard from "../interfaces/propCard";
 
 const data: PropCard[] = [
     {
+        projectName: 'Finances',
+        projectLink: 'https://github.com/DiogoMEng/finances',
+        description: 'Aplicação web de gestão financeira proporciona uma maneira simples e eficiente de controlar suas finanças pessoais. Com ela, você pode facilmente inserir suas receitas e despesas, visualizar relatórios claros sobre seus gastos e saldo, e fazer alterações nos dados sempre que necessário. É a ferramenta ideal para manter suas finanças organizadas e tomar decisões mais informadas sobre seu dinheiro.',
+        status: 'Status - Em Aprimoramento',
+        technologies: {
+            img: [
+                "https://skillicons.dev/icons?i=typescript", 
+                "https://skillicons.dev/icons?i=nodejs",
+                "https://skillicons.dev/icons?i=expressjs",
+                "https://skillicons.dev/icons?i=mysql",
+                "https://skillicons.dev/icons?i=react",
+                "https://skillicons.dev/icons?i=html",
+                "https://skillicons.dev/icons?i=tailwind"
+            ],
+            alt: ["TypeScript", "NodeJS", "Express", "MySql", "React", "HTML", "Tailwindcss"],
+            title: ["TypeScript", "NodeJS", "Express", "MySql", "React", "HTML", "Tailwindcss"]
+        },
+    },
+    {
         projectName: 'Contact Book',
         projectLink: 'https://github.com/DiogoMEng/Contact_Book',
         description: 'agenda de contatos que permite armazenar, gerenciar e organizar informações de contatos de cada usuário. Com esta agenda, os usuários podem adicionar, editar e remover contatos facilmente, além de incluir detalhes importantes como nome, telefone, e-mail e endereço. A interface é intuitiva e amigável, garantindo que todos possam utilizar a ferramenta sem dificuldades. Meu objetivo é criar uma solução prática e eficiente para que as pessoas possam manter seus contatos sempre atualizados e acessíveis, facilitando a comunicação e o gerenciamento das suas redes de relacionamento.',
@@ -35,22 +54,6 @@ const data: PropCard[] = [
             ],
             alt: ["JavaScript", "NodeJS", "Express", "Sequelize", "MySQL"],
             title: ["Javascript", "NodeJS", "Express", "Sequelize", "MySQL"]
-        }
-    },
-    {
-        projectName:'Pomodoro Timer',
-        projectLink:'https://github.com/DiogoMEng/Pomodoro-Timer',
-        description:'Este projeto inovador que utiliza a técnica de Pomodoro para aumentar a produtividade e melhorar a gestão do tempo. A técnica de Pomodoro é um método popular de gerenciamento do tempo que alterna períodos de trabalho focado com pequenos intervalos de descanso, ajudando a manter a concentração e evitar o cansaço mental.',
-        status:'Status - Finalizado',
-        technologies:{
-            img: [
-                "https://skillicons.dev/icons?i=typescript", 
-                "https://skillicons.dev/icons?i=react",
-                "https://skillicons.dev/icons?i=html",
-                "https://skillicons.dev/icons?i=css"
-            ],
-            alt: ["Typescript", "React", "HTML", "CSS"],
-            title: ["Typescript", "React", "HTML", "CSS"]
         }
     },
     {

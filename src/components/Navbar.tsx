@@ -3,7 +3,7 @@ import logo from '../assets/img/logo.png'
 const NavBar = (): JSX.Element => {
     return (
         <nav className="flex bg-gradient-to-r from-[#000000] to-[#1a18a4] items-center justify-between px-5 text-white">
-            <div className="flex items-center text-3xl"><img src={logo} alt="logo do site" width={70} height={70} />Portfolio</div>
+            <div className="flex items-center text-3xl"><img src={logo} className='py-4 mr-3' alt="logo do site" width={70} height={70} />Portfolio</div>
 
             <div>
                     <ul className="nav-links">
