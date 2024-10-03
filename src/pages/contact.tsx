@@ -30,7 +30,7 @@ export const Contact = () => {
     return (
         <section className="min-h-screen">
             <form onSubmit={sendForm} className="bg-white px-3 py-5 w-2/6 mx-auto mt-10 text-[#1a18a4] rounded-md text-lg max-md:w-11/12">
-                <h1 className="bg-[#1a18a4] w-1/2 mx-auto mb-5 p-2 text-white text-center text-2xl font-bold border-b-2 rounded-md max-md:w-3/4">Entre em Contato</h1>
+                <h1 className="bg-[#1a18a4] w-1/2 mx-auto mb-5 p-2 text-white text-center text-2xl font-bold border-b-2 rounded-md max-md:text-lg max-xl:text-lg">Entre em Contato</h1>
 
                 {/* INFO */}
                 <div className="mt-5">
@@ -64,12 +64,12 @@ export const Contact = () => {
                 <div className="flex justify-center text-white gap-5 mt-5">
                     <input className={`w-28 p-1 rounded-md font-bold bg-[#5755e2] duration-700 ${
                         isSending 
-                        ? 'bg-[#9E9E9E] text-gray-500 cursor-not-allowed' 
+                        ? 'bg-[#9E9E9E] text-gray-300 cursor-not-allowed' 
                         : 'bg-[#5755e2] hover:bg-green-600'
                     }`} type="submit" value={isSending ? "Enviando..." : "Enviar"} disabled={isSending}/>
                     <input className={`w-28 p-1 rounded-md font-bold bg-[#5755e2] duration-700 hover:bg-red-600 ${
                         isSending
-                        ? 'bg-[#9E9E9E] text-gray-500 cursor-not-allowed'
+                        ? 'bg-[#9E9E9E] text-gray-300 cursor-not-allowed'
                         : 'bg-[#5755e2] hover:bg-red-600'
                     }`} type="reset" value="Limpar" disabled={isSending}/>
                 </div>
