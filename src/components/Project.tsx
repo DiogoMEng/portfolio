@@ -1,10 +1,12 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PropCard from '../interfaces/propCard';
 
 function Card (prop: PropCard): JSX.Element {
     const technologies = [];
     const [status, setStatus] = useState("bg-success p-1 rounded text-light font-weight-bold");
+    const [isVisible, setIsVisible] = useState(false);
+    const cardRef = useRef(null);
     
     for (let i = 0; i < prop.technologies.img.length; i++){
         technologies.push(<li className='ml-2'><img src={prop.technologies.img[i]} width={35} height={35} alt={prop.technologies.alt[i]} title={prop.technologies.title[i]}/></li>)
@@ -24,8 +26,43 @@ function Card (prop: PropCard): JSX.Element {
         }
     }, [prop]);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                    } else {
+                        setIsVisible(false);
+                    }
+                });
+            },
+            {
+                threshold: 0.7
+            }
+        );
+
+        if(cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => {
+            if(cardRef.current) {
+                observer.unobserve(cardRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className="w-4/5 mx-auto bg-[#1a18a4] p-5 rounded-md duration-300 hover:p-6 hover:shadow-lg hover:shadow-black max-md:w-full max-md:mb-5 max-md:p-5">
+        <div
+            ref={cardRef} 
+            className={`w-4/5 mx-auto bg-[#1a18a4] p-3 rounded-md duration-300 hover:shadow-2xl hover:shadow-black max-md:w-full max-md:mb-5 max-md:p-3 ${
+                isVisible ? 'max-md:p-4 max-md:shadow-2xl max-md:shadow-black' : ''
+            }`}
+            style={{
+                transition: 'all 0.5s ease-in-out'
+            }}
+        >
             <div>
                 {/* imagem e nome do projeto */}
                 <h3 className='text-center mb-1.5'>
