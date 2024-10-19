@@ -4,7 +4,7 @@ const data: PropCard[] = [
     {
         projectName: 'Finances',
         projectLink: 'https://github.com/DiogoMEng/projetos-typescript/tree/main/finances',
-        description: 'Aplicação web de gestão financeira proporciona uma maneira simples e eficiente de controlar suas finanças pessoais. Com ela, você pode facilmente inserir suas receitas e despesas, visualizar relatórios claros sobre seus gastos e saldo, e fazer alterações nos dados sempre que necessário. É a ferramenta ideal para manter suas finanças organizadas e tomar decisões mais informadas sobre seu dinheiro.',
+        description: 'Aplicação web de gestão financeira que facilita o controle de receitas e despesas, com relatórios claros para uma visão completa dos gastos e saldo. Ideal para organizar suas finanças e tomar decisões mais inteligentes sobre seu dinheiro.',
         status: 'Status - Em Aprimoramento',
         technologies: {
             img: [
@@ -23,7 +23,7 @@ const data: PropCard[] = [
     {
         projectName: 'Contact Book',
         projectLink: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/agendaContatos',
-        description: 'agenda de contatos que permite armazenar, gerenciar e organizar informações de contatos de cada usuário. Com esta agenda, os usuários podem adicionar, editar e remover contatos facilmente, além de incluir detalhes importantes como nome, telefone, e-mail e endereço. A interface é intuitiva e amigável, garantindo que todos possam utilizar a ferramenta sem dificuldades. Meu objetivo é criar uma solução prática e eficiente para que as pessoas possam manter seus contatos sempre atualizados e acessíveis, facilitando a comunicação e o gerenciamento das suas redes de relacionamento.',
+        description: 'Agenda de contatos que permite armazenar, gerenciar e organizar informações de forma prática. Usuários podem adicionar, editar e remover contatos com facilidade, mantendo dados como nome, telefone, e-mail e endereço sempre atualizados. A interface intuitiva garante acesso rápido e eficiente aos seus contatos.',
         status: 'Status - Finalizado',
         technologies: {
             img: [
@@ -42,7 +42,7 @@ const data: PropCard[] = [
     {
         projectName:'Student Registration',
         projectLink:'https://github.com/DiogoMEng/projetos-javascript/tree/main/api_rest',
-        description:'O projeto simula um sistema de cadastro simples, onde posso salvar os dados dos alunos em um banco de dados MariaDB. A API criada utiliza a arquitetura MVC como base, o que proporciona uma melhor organização e padronização do código, além de facilitar futuras manutenções e melhorias. A API oferece funcionalidades específicas para gerenciar contas cadastradas, garantindo que somente usuários autenticados possam acessar e realizar operações em rotas protegidas. Isso inclui a criação, leitura, atualização e exclusão de registros de alunos. Com essa estrutura, busco garantir a segurança e a eficiência do sistema, facilitando o gerenciamento e a escalabilidade das funcionalidades.',
+        description:'Segurança e eficiência no gerenciamento de cadastros de alunos. Este projeto simula um sistema de cadastro com MariaDB, usando uma API organizada pela arquitetura MVC. Ele permite criar, ler, atualizar e excluir registros, com rotas protegidas que garantem acesso apenas a usuários autenticados, focando em escalabilidade e fácil manutenção.',
         status:'Status - Finalizado',
         technologies:{
             img: [
@@ -59,7 +59,7 @@ const data: PropCard[] = [
     {
         projectName:'Form Validator',
         projectLink:'https://github.com/DiogoMEng/projetos-typescript/tree/main/formValidator',
-        description:'O validador de formulários, projetado para assegurar que todas as entradas do usuário sejam verificadas e validadas de forma eficaz. Utilizando TypeScript, manipulo o DOM para implementar as validações necessárias em tempo real, garantindo que os dados inseridos pelos usuários sejam precisos e seguros antes de serem enviados. Este projeto não apenas melhora a experiência do usuário ao fornecer feedback instantâneo sobre a validade das entradas, mas também ajuda a evitar erros comuns de preenchimento de formulários. Ao integrar esta ferramenta com diversas aplicações, posso garantir que os dados coletados sejam consistentes e corretos, facilitando o processo de coleta de informações e aumentando a eficiência dos sistemas que dependem desses dados.',
+        description:'Validação em tempo real para garantir precisão e segurança. Este validador de formulários, desenvolvido com TypeScript, verifica as entradas do usuário no momento, proporcionando feedback instantâneo e prevenindo erros. A solução assegura dados consistentes e corretos, melhorando a experiência do usuário e a eficiência de sistemas que dependem dessas informações.',
         status:'Status - Finalizado',
         technologies:{
             img: [

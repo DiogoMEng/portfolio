@@ -7,7 +7,7 @@ body {
     background-color: #1a18a4;
     height: 100vh;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;;
+    font-family: helvetica;
 }
 
 @media (max-width: 768px) {

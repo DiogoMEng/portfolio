@@ -1,64 +1,28 @@
 import { useEffect, useState } from 'react';
-import perfil from '../assets/img/perfil.png';
+import perfil from '../assets/img/perfil.jpeg';
 
 const ProfileDescription = (): JSX.Element => {
-    const [knowMore, setKnowMore] = useState(false);
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-    const currentData = new Date();
-
-    function handleKnowMoreToggle (): void {
-        
-        setKnowMore(!knowMore);
-
-    }
-
-    useEffect(() => {
-
-        const handleResize = (): void => {
-            setIsSmallScreen(window.innerWidth <= 768);
-        }
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-
-    }, []);
-
     return (
         <section className="w-full py-10">
 
-            <article className="flex mx-auto w-9/12 p-5 bg-[#0b097e] rounded-md items-center justify-items-center max-md:grid max-md:w-10/12">
+            <div className="flex mx-auto w-9/12 p-5 bg-[#0b097e] rounded-md items-center justify-center max-md:justify-items-center max-md:grid max-md:w-10/12">
 
-                <img src={perfil} className="w-1/3 max-sm:w-3/4" alt="user-perfil" />
+                <img src={perfil} className="w-72 h-72 mr-5 border-[3px] border-solid border-white rounded-full max-sm:w-56 max-sm:h-56" alt="user-perfil" />
                 {/* descrição de perfil */}
-                <div className="w-2/3 max-md:w-5/6">
+                <div className="w-2/3 max-md:w-11/12 max-md:mt-3">
                     <h2 className="text-3xl text-center font-bold">Olá, me chamo Diogo Mello</h2>
                     <h3 className="text-center"><span className="text-xl inline-block mb-3 border-solid border-b-2">Desenvolvedor Back-end</span></h3>
                     <p className="text-justify">
-                        Tenho {currentData.getFullYear() - 2002} anos e estou atualmente cursando Engenharia da Computação. Desde os primeiros semestres da faculdade, fui cativado pelo mundo da programação e do desenvolvimento de software. Minha paixão por desenvolvimento começou com os primeiros códigos em C e C++, e desde então venho explorando diferentes linguagens e tecnologias. {(!isSmallScreen || knowMore) && (
-                            <>
-                                A capacidade de criar sistemas robustos e escaláveis que impulsionam as aplicações para frente é algo que me fascina profundamente no desenvolvimento Back-end. Ao longo dos anos, venho aprimorando as minhas habilidades técnicas e desenvolvendo uma compreensão sólida dos princípios fundamentais de engenharia de software. Estou constantemente buscando aprender e me desafiar, sempre em busca de novos conhecimentos e habilidades que possam contribuir para o meu crescimento profissional.  
-                            </>
-                        )}
+                        Estou me Graduando em <b>Engenharia da Computação</b> e me especializo em <b>desenvolvimento backend com NodeJS</b>, utilizando <b>Javascript ou Typescript</b>. Tenho uma base sólida em lógica de programação e experiência com bancos de dados como <b>MySQL, PostgreSQL e MongoDB</b>, além de competência em modelagem de dados. Também sou habilidoso na <b>criação e consumo de APIs RESTful</b>, sempre aplicando o padrão de projeto MVC. Estou em constante aprimoramento e busco contribuir para o desenvolvimento de sistemas escaláveis e eficientes.
                     </p>
-                    {isSmallScreen && (
-                        <button className='mb-4 font-bold duration-75 hover:border-b-2 hover:border-solid' onClick={handleKnowMoreToggle}>
-                            {knowMore ? 'Mostrar menos' : 'Mostrar mais'}
-                        </button>
-                    )}
-
                     {/* redes sociais */}
-                    <div className="flex justify-center">
+                    <div className="flex mt-3 justify-center">
                         <a href="https://www.linkedin.com/in/diogo-meng"><img src="https://skillicons.dev/icons?i=linkedin" width={50} height={50} alt="Linkedin" title="Linkedin" /></a>
                         <a className="ml-3" href="https://github.com/DiogoMEng"><img src="https://skillicons.dev/icons?i=github" width={50} height={50} alt="Github" title="Github" /></a>
                     </div>
                 </div>
 
-            </article>
+            </div>
         </section>
     )
 };
