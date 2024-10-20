@@ -6,7 +6,7 @@ const ProfileDescription = (): JSX.Element => {
 
             <div className="flex mx-auto w-9/12 p-5 bg-[#0b097e] rounded-md items-center justify-center max-md:justify-items-center max-md:grid max-md:w-10/12">
 
-                <img src={perfil} className="w-72 h-72 mr-5 border-[3px] border-solid border-black rounded-full max-sm:w-56 max-sm:h-56" alt="user-perfil" />
+                <img src={perfil} className="w-72 h-72 mr-5 border-[3px] border-solid border-white rounded-full max-sm:m-0 max-sm:w-56 max-sm:h-56" alt="user-perfil" />
                 {/* descrição de perfil */}
                 <div className="w-2/3 max-md:w-11/12 max-md:mt-3">
                     <h2 className="text-3xl text-center font-bold">Olá, me chamo Diogo Mello</h2>
