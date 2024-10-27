@@ -33,6 +33,20 @@ const Project = (): JSX.Element => {
                     />
                 ))}
             </div>
+
+            {/* card de projetos - fila 3 */}
+            <div className="mx-16 grid grid-cols-2 gap-x-2 mt-5 max-md:mx-9 max-md:grid-cols-1">
+                {data.slice(4, 6).map((project, index) => (
+                    <Card 
+                        key={index}
+                        projectName={project.projectName}
+                        projectLink={project.projectLink}
+                        description={project.description}
+                        status={project.status}
+                        technologies={project.technologies}
+                    />
+                ))}
+            </div>
         </section>
     )
 };
