@@ -4,4 +4,4 @@ const Footer = (): JSX.Element => {
     )
 }
 
-export { Footer };
+export default Footer;

@@ -26,4 +26,4 @@ const ProfileDescription = (): JSX.Element => {
     )
 };
 
-export { ProfileDescription };
+export default ProfileDescription;

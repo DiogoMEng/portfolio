@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PropCard from '../interfaces/propCard';
 
-function Card (prop: PropCard): JSX.Element {
+function Project (prop: PropCard): JSX.Element {
     const technologies = [];
     const [status, setStatus] = useState("bg-success p-1 rounded text-light font-weight-bold");
     const [isVisible, setIsVisible] = useState(false);
@@ -86,4 +86,4 @@ function Card (prop: PropCard): JSX.Element {
     );
 }
 
-export default Card;
+export default Project;
