@@ -1,5 +1,6 @@
 import { RiJavascriptFill } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
 
 const MainSkill = ():JSX.Element => {
   return (
@@ -27,6 +28,9 @@ const MainSkill = ():JSX.Element => {
                 <li className="ml-8 list-disc">React</li>
               </ul>
             </div>
+            <div className="bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center duration-700 group-hover:bg-amber-400">
+              <a className="flex text-[#0b097e]" href="https://github.com/DiogoMEng/projetos-javascript">Github <FaGithub className="ml-3 text-[#0b097e] text-2xl"/></a>
+            </div>
           </div>
 
           {/* TypeScript Skill */}
@@ -46,6 +50,9 @@ const MainSkill = ():JSX.Element => {
                 <li className="mt-3 ml-8 list-disc">NodeJS</li>
                 <li className="ml-8 list-disc">React</li>
               </ul>
+            </div>
+            <div className="bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center duration-700 group-hover:bg-cyan-400">
+              <a className="flex text-[#0b097e]" href="https://github.com/DiogoMEng/projetos-javascript">Github <FaGithub className="ml-3 text-[#0b097e] text-2xl"/></a>
             </div>
           </div>
       </div>
