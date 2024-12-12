@@ -5,13 +5,13 @@ import { FaGithub } from "react-icons/fa";
 const MainSkill = ():JSX.Element => {
   return (
     <section className="p-5">
-      <h1 className="text-3xl text-center font-bold max-sm:text-lg">
-        <span>Principais Linguagens de Programação</span>
+      <h1 className="text-4xl text-center font-bold max-sm:text-lg">
+        <span className="p-2 bg-[#0b097e] border-l-8 border-b-4 rounded-md">Principais Linguagens de Programação</span>
       </h1>
-      <div className="flex gap-5 w-3/4 mx-auto mt-5 justify-center">
+      <div className="flex gap-5 w-3/4 mx-auto mt-10 justify-center max-sm:block max-sm:w-full *:max-sm:w-full">
 
           {/* Javascript skill */}
-          <div className="bg-[#0b097e] w-1/3 p-5 rounded-md border-2 duration-700 hover:border-amber-400 group">
+          <div className="bg-[#0b097e] w-1/3 p-5 rounded-md border-2 duration-700 hover:border-amber-400 group max-sm:mb-5">
             <div className="flex items-center">
               <RiJavascriptFill className="text-9xl text-white duration-700 group-hover:text-amber-400" />
               <span className="text-4xl font-bold duration-700 group-hover:text-amber-400">JavaScript</span>
