@@ -1,6 +1,7 @@
 import { RiJavascriptFill } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
+import observationPosition from "../utils/observationPosition";
 
 const MainSkill = ():JSX.Element => {
   return (

@@ -1,6 +1,7 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useRef, useState } from 'react';
 import PropCard from '../interfaces/propCard';
+import observationPosition from '../utils/observationPosition';
 
 function Project (prop: PropCard): JSX.Element {
     const technologies = [];
@@ -26,32 +27,7 @@ function Project (prop: PropCard): JSX.Element {
         }
     }, [prop]);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                    } else {
-                        setIsVisible(false);
-                    }
-                });
-            },
-            {
-                threshold: 0.7
-            }
-        );
-
-        if(cardRef.current) {
-            observer.observe(cardRef.current);
-        }
-
-        return () => {
-            if(cardRef.current) {
-                observer.unobserve(cardRef.current);
-            }
-        };
-    }, []);
+    useEffect(observationPosition(setIsVisible, cardRef), []);
 
     return (
         <div
