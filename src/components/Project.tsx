@@ -27,7 +27,7 @@ function Project (prop: PropCard): JSX.Element {
         }
     }, [prop]);
 
-    useEffect(observationPosition(setIsVisible, cardRef), []);
+    useEffect(observationPosition(setIsVisible, cardRef, 0.7), []);
 
     return (
         <div

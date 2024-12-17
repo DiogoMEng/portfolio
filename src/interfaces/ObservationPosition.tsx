@@ -4,7 +4,8 @@ type SetIsVisible = (value: boolean) => void;
 
 type observationPosition = (
   setIsVisible: SetIsVisible,
-  cardRef: MutableRefObject<HTMLElement | null>
+  cardRef: MutableRefObject<HTMLElement | null>,
+  threshold: number
 ) => () => void;
 
 export default observationPosition;

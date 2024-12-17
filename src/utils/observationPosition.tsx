@@ -1,6 +1,6 @@
 import ObservationPosition from "../interfaces/ObservationPosition";
 
-const observationPosition: ObservationPosition = (setIsVisible, cardRef) => {
+const observationPosition: ObservationPosition = (setIsVisible, cardRef, threshold) => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -12,7 +12,7 @@ const observationPosition: ObservationPosition = (setIsVisible, cardRef) => {
             });
         },
         {
-            threshold: 0.7
+            threshold: threshold
         }
     );
 
