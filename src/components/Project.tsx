@@ -31,7 +31,7 @@ function Project (prop: PropCard): JSX.Element {
 
     return (
         <div
-            ref={cardRef} 
+            ref={cardRef}
             className={`w-4/5 mx-auto bg-[#1a18a4] p-3 rounded-md duration-300 hover:shadow-2xl hover:shadow-black max-md:w-full max-md:mb-5 max-md:p-3 ${
                 isVisible ? 'max-md:p-4 max-md:shadow-2xl max-md:shadow-black' : ''
             }`}
