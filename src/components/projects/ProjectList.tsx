@@ -1,5 +1,5 @@
 import Project from './Project';
-import data from '../config/data';
+import data from '../../config/data';
 
 const ProjectList = (): JSX.Element => {
     return(

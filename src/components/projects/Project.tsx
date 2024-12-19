@@ -1,7 +1,7 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useRef, useState } from 'react';
-import PropCard from '../interfaces/propCard';
-import observationPosition from '../utils/observationPosition';
+import PropCard from '../../interfaces/propCard';
+import observationPosition from '../../utils/observationPosition';
 
 function Project (prop: PropCard): JSX.Element {
     const technologies = [];
