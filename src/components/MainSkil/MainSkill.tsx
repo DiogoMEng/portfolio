@@ -1,14 +1,15 @@
 import { RiJavascriptFill } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
-import observationPosition from "../utils/observationPosition";
+import observationPosition from "../../utils/observationPosition";
 import { useEffect, useRef, useState } from "react";
+import Skill from "./Skill";
 
 const MainSkill = ():JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
 
-  useEffect(observationPosition(setIsVisible, cardRef, 0.5), []);
+  useEffect(observationPosition(setIsVisible, cardRef, 0.7), []);
 
   return (
     <section className="p-5">
@@ -27,7 +28,10 @@ const MainSkill = ():JSX.Element => {
               transition: 'all 0.5s ease-in-out'
             }}
           >
-            <div className="flex items-center">
+            <Skill>
+              <RiJavascriptFill/>
+            </Skill>
+            {/* <div className="flex items-center">
               <RiJavascriptFill className={`text-9xl text-white duration-700 group-hover:text-amber-400 ${isVisible ? 'max-md:text-amber-400' : ''}`} />
               <span className="text-4xl font-bold duration-700">JavaScript</span>
             </div>
@@ -38,7 +42,7 @@ const MainSkill = ():JSX.Element => {
                 <li className="ml-8 list-disc">Express.js</li>
                 <li className="ml-8 list-disc">NestJS</li>
               </ul>
-            </div>
+            </div> */}
 
             {/* button - redireciona para projetos */}
             <div className={`bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center duration-700 group-hover:bg-amber-400 ${isVisible ? 'max-md:bg-amber-400' : ''}`}>

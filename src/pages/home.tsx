@@ -1,4 +1,4 @@
-import MainSkill from "../components/MainSkill";
+import MainSkill from "../components/MainSkil/MainSkill";
 import ProfileDescription from "../components/ProfileDescription";
 import ProjectList from "../components/projects/ProjectList";
 
