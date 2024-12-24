@@ -19,4 +19,4 @@ const NavBar = (): JSX.Element => {
     );
 };
 
-export { NavBar };
+export default NavBar;

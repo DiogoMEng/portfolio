@@ -1,4 +1,6 @@
 import perfil from '../assets/img/perfil.jpeg';
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
 
 const ProfileDescription = (): JSX.Element => {
     return (
@@ -16,8 +18,8 @@ const ProfileDescription = (): JSX.Element => {
                     </p>
                     {/* redes sociais */}
                     <div className="flex mt-3 justify-center">
-                        <a href="https://www.linkedin.com/in/diogo-meng"><img src="https://skillicons.dev/icons?i=linkedin" width={50} height={50} alt="Linkedin" title="Linkedin" /></a>
-                        <a className="ml-3" href="https://github.com/DiogoMEng"><img src="https://skillicons.dev/icons?i=github" width={50} height={50} alt="Github" title="Github" /></a>
+                        <a href="https://www.linkedin.com/in/diogo-meng"><FaLinkedin className="text-slate-100 text-6xl" /></a>
+                        <a className="ml-3" href="https://github.com/DiogoMEng"><FaSquareGithub className="text-slate-100 text-6xl"/></a>
                     </div>
                 </div>
 
@@ -26,4 +28,4 @@ const ProfileDescription = (): JSX.Element => {
     )
 };
 
-export { ProfileDescription };
+export default ProfileDescription;

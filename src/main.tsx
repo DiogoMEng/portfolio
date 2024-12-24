@@ -6,8 +6,8 @@ import { RouterProvider } from 'react-router-dom';
 import router from './routes';
 
 // COMPONENTS
-import { Footer } from './components/Footer';
-import { NavBar } from './components/Navbar';
+import Footer from './components/Footer';
+import NavBar from './components/Navbar';
 
 // CSS
 import './assets/css/style.css';

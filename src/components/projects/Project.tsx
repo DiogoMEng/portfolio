@@ -1,8 +1,9 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useRef, useState } from 'react';
-import PropCard from '../interfaces/propCard';
+import ProjectProtocol from '../../interfaces/Projects';
+import observationPosition from '../../utils/observationPosition';
 
-function Card (prop: PropCard): JSX.Element {
+function Project (prop: ProjectProtocol): JSX.Element {
     const technologies = [];
     const [status, setStatus] = useState("bg-success p-1 rounded text-light font-weight-bold");
     const [isVisible, setIsVisible] = useState(false);
@@ -26,36 +27,11 @@ function Card (prop: PropCard): JSX.Element {
         }
     }, [prop]);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                    } else {
-                        setIsVisible(false);
-                    }
-                });
-            },
-            {
-                threshold: 0.7
-            }
-        );
-
-        if(cardRef.current) {
-            observer.observe(cardRef.current);
-        }
-
-        return () => {
-            if(cardRef.current) {
-                observer.unobserve(cardRef.current);
-            }
-        };
-    }, []);
+    useEffect(observationPosition(setIsVisible, cardRef, 0.7), []);
 
     return (
         <div
-            ref={cardRef} 
+            ref={cardRef}
             className={`w-4/5 mx-auto bg-[#1a18a4] p-3 rounded-md duration-300 hover:shadow-2xl hover:shadow-black max-md:w-full max-md:mb-5 max-md:p-3 ${
                 isVisible ? 'max-md:p-4 max-md:shadow-2xl max-md:shadow-black' : ''
             }`}
@@ -86,4 +62,4 @@ function Card (prop: PropCard): JSX.Element {
     );
 }
 
-export default Card;
+export default Project;
