@@ -633,6 +633,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -723,6 +727,10 @@ video {
 
 .cursor-not-allowed {
   cursor: not-allowed;
+}
+
+.list-inside {
+  list-style-position: inside;
 }
 
 .list-disc {
@@ -852,6 +860,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cyan-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 211 238 / var(--tw-bg-opacity, 1));
+}
+
+.bg-amber-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 191 36 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-r {
@@ -1050,6 +1068,14 @@ body {
   input[type=checkbox]:checked ~ .menu{
     display: block;
   }
+}
+
+.\*\:list-inside > * {
+  list-style-position: inside;
+}
+
+.\*\:list-disc > * {
+  list-style-type: disc;
 }
 
 .\*\:text-xl > * {
