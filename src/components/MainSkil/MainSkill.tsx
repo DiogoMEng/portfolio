@@ -34,7 +34,7 @@ const MainSkill = ():JSX.Element => {
             </Skill>
 
             {/* button - redireciona para projetos */}
-            <ButtonGithub statusIsVisible={isVisible} bgHover="bg-amber-400">
+            <ButtonGithub style={`group-hover:bg-amber-400 ${isVisible ? `max-md:bg-amber-400` : ''}`}>
               <FaGithub className={`ml-3 text-[#0b097e] text-2xl group-hover:animate-bounce ${isVisible ? 'animate-bounce' : ''}`}/>
             </ButtonGithub>
           </div>
@@ -54,7 +54,7 @@ const MainSkill = ():JSX.Element => {
             </Skill>
 
             {/* button - redireciona para projetos */}
-            <ButtonGithub statusIsVisible={isVisible} bgHover="bg-cyan-400">
+            <ButtonGithub style={`group-hover:bg-cyan-400 ${isVisible ? `max-md:bg-cyan-400` : ''}`}>
               <FaGithub className={`ml-3 text-[#0b097e] text-2xl group-hover:animate-bounce ${isVisible ? 'animate-bounce' : ''}`}/>
             </ButtonGithub>
           </div>
