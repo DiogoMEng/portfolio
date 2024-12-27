@@ -1,9 +1,9 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useRef, useState } from 'react';
-import PropCard from '../interfaces/propCard';
+import { ProjectProtocol } from '../interfaces/propCard';
 import observationPosition from '../utils/observationPosition';
 
-function Project (prop: PropCard): JSX.Element {
+function Project (prop: ProjectProtocol): JSX.Element {
     const technologies = [];
     const [status, setStatus] = useState("bg-success p-1 rounded text-light font-weight-bold");
     const [isVisible, setIsVisible] = useState(false);

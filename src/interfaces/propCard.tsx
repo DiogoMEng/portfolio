@@ -1,4 +1,4 @@
-interface PropCard {
+export interface ProjectProtocol {
     projectName: string;
     projectLink: string;
     description: string;
@@ -10,4 +10,6 @@ interface PropCard {
     };
 }
 
-export default PropCard;
+export interface SkillProtocol {
+    children: React.ReactNode
+}
