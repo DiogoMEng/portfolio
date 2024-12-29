@@ -11,5 +11,7 @@ export interface ProjectProtocol {
 }
 
 export interface SkillProtocol {
-    children: React.ReactNode
+    children: React.ReactNode,
+    nameSkill: string,
+    generalColor: string
 }
