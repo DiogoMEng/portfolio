@@ -1,6 +1,6 @@
-import MainSkill from "../components/MainSkill";
+import MainSkill from "../components/skills/MainSkill";
 import ProfileDescription from "../components/ProfileDescription";
-import ProjectList from "../components/ProjectList";
+import ProjectList from "../components/project/ProjectList";
 
 const Home = (): JSX.Element => {
   return(
