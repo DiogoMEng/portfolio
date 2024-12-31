@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { SkillProtocol } from "../../interfaces/propCard";
+import { LinkButton, SkillProtocol } from "../../interfaces/propCard";
 import observationPosition from "../../utils/observationPosition";
-import { FaGithub } from "react-icons/fa";
+import GithubButton from "./GithubButton";
 
 const CardSkill = ({ 
   nameSkill, 
   skills, 
   generalColor, 
-  children 
-}: SkillProtocol):JSX.Element => {
+  children,
+  link,
+  style
+}: SkillProtocol & LinkButton):JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
 
@@ -40,17 +42,10 @@ const CardSkill = ({
             ))}
           </ul>
         </div>
-        <div className={`bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center duration-700 group-hover:bg-${generalColor}-400`}>
-          <a 
-            className="flex text-[#0b097e]" 
-            href="https://github.com/DiogoMEng/projetos-javascript"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-              Github 
-              <FaGithub className="ml-3 text-[#0b097e] text-2xl group-hover:animate-bounce"/>
-          </a>
-        </div>
+        <GithubButton
+          link={link}
+          style={style}
+        />
       </div>
   )
 }

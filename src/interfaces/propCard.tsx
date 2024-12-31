@@ -16,3 +16,8 @@ export interface SkillProtocol {
     skills: Array<string>,
     generalColor: string
 }
+
+export interface LinkButton {
+    link: string
+    style?: string
+}
