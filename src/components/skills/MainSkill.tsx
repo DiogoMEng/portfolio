@@ -15,7 +15,7 @@ const MainSkill = ():JSX.Element => {
             skills={["Node.JS", "Express.JS", "NestJS"]}
             generalColor="amber"
             link="https://github.com/DiogoMEng/projetos-javascript"
-            style="duration-700 group-hover:bg-amber-400"
+            styleButton="duration-700 group-hover:bg-amber-400"
           >
             <RiJavascriptFill className="text-9xl text-white duration-700 group-hover:text-amber-400" />
           </CardSkill>
@@ -26,7 +26,7 @@ const MainSkill = ():JSX.Element => {
             skills={["Node.JS", "Express.JS", "NestJS"]}
             generalColor="cyan"
             link="https://github.com/DiogoMEng/projetos-typescript"
-            style="duration-700 group-hover:bg-cyan-400"
+            styleButton="duration-700 group-hover:bg-cyan-400"
           >
             <BiLogoTypescript className="text-9xl text-white duration-700 group-hover:text-cyan-400" />
           </CardSkill>

@@ -9,7 +9,7 @@ const CardSkill = ({
   generalColor, 
   children,
   link,
-  style
+  styleButton
 }: SkillProtocol & LinkButton):JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
@@ -44,7 +44,7 @@ const CardSkill = ({
         </div>
         <GithubButton
           link={link}
-          style={style}
+          styleButton={styleButton}
         />
       </div>
   )

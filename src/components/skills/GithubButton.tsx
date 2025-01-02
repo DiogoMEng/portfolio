@@ -3,10 +3,10 @@ import { LinkButton } from "../../interfaces/propCard"
 
 const GithubButton = ({
   link,
-  style
+  styleButton
 }: LinkButton):JSX.Element => {
   return (
-    <div className={`bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center ${style}`}>
+    <div className={`bg-slate-100 w-32 mt-5 px-4 py-2 rounded-md text-xl items-center ${styleButton}`}>
       <a 
         className="flex text-[#0b097e]" 
         href={link}

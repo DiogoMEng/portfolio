@@ -19,5 +19,5 @@ export interface SkillProtocol {
 
 export interface LinkButton {
     link: string
-    style?: string
+    styleButton?: string
 }
