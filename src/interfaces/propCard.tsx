@@ -1,4 +1,4 @@
-interface ProjectProtocol {
+export interface ProjectProtocol {
     projectName: string;
     projectLink: string;
     description: string;
@@ -10,4 +10,9 @@ interface ProjectProtocol {
     };
 }
 
-export default ProjectProtocol;
+export interface SkillProtocol {
+    children: React.ReactNode,
+    nameSkill: string,
+    frameworks: string[],
+    colorContainer: string
+}
