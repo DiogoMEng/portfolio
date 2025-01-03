@@ -1,22 +1,20 @@
-import { SkillProtocol } from "../../interfaces/propCard";
-import { useEffect, useRef, useState } from "react";
-import observationPosition from "../../utils/observationPosition";
+import { LinkButtonProtocol, SkillProtocol } from "../../interfaces/propCard";
+import GithubButton from "./GithubButton";
 
-const Skill = ({children, frameworks, nameSkill, colorContainer}: SkillProtocol):JSX.Element => {
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef(null);
-
-  useEffect(observationPosition(setIsVisible, cardRef, 0.7), []);
+const Skill = ({
+  children, 
+  frameworks, 
+  nameSkill, 
+  colorContainer,
+  colorButton,
+  link
+}: SkillProtocol & LinkButtonProtocol):JSX.Element => {
 
   return (
     <div
-      ref={cardRef}
       className={
-        `bg-[#0b097e] w-1/3 p-5 rounded-md border-2 duration-700 hover:border-${colorContainer}-400 *:hover:text-${colorContainer}-400 group max-md:mb-5 ${isVisible ? `max-md:border-${colorContainer}-400 max-md:*:text-${colorContainer}-400` : ''}`
+        `bg-[#0b097e] w-1/3 p-5 rounded-md border-2 duration-700 ${colorContainer} max-md:mb-5`
       }
-      style={{
-        transition: 'all 0.5s ease-in-out'
-      }}
     >
       <div className="flex items-center">
         {children}
@@ -32,6 +30,10 @@ const Skill = ({children, frameworks, nameSkill, colorContainer}: SkillProtocol)
           )}
         </ul>
       </div>
+      <GithubButton 
+        colorButton={colorButton}
+        link={link}
+      />
     </div>
   )
 }

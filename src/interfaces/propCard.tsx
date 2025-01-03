@@ -16,3 +16,8 @@ export interface SkillProtocol {
     frameworks: string[],
     colorContainer: string
 }
+
+export interface LinkButtonProtocol {
+    colorButton: string,
+    link: string
+}

@@ -21,18 +21,22 @@ const MainSkill = ():JSX.Element => {
           <CardSkill
             nameSkill="JavaScript"
             frameworks={['Node.Js', 'Express.JS', 'NestJS']}
-            colorContainer="amber"
+            colorContainer="border-amber-400 *:text-amber-400"
+            colorButton="bg-amber-400"
+            link="https://github.com/DiogoMEng/projetos-javascript"
           >
-            <RiJavascriptFill className={`text-9xl text-white duration-700 group-hover:text-amber-400 ${isVisible ? 'max-md:text-amber-400' : ''}`} />
+            <RiJavascriptFill className={`text-9xl text-amber-400`} />
           </CardSkill>
 
           {/* TypeScript Skill */}
           <CardSkill
             nameSkill="TypeScript"
             frameworks={['Node.Js', 'Express.JS', 'NestJS']}
-            colorContainer="cyan"
+            colorContainer="border-cyan-400 *:text-cyan-400"
+            colorButton="bg-cyan-400"
+            link="https://github.com/DiogoMEng/projetos-typescript"
           >
-            <BiLogoTypescript className={`text-9xl text-white duration-700 group-hover:text-cyan-400 ${isVisible ? 'max-md:text-cyan-400' : ''}`} />
+            <BiLogoTypescript className={`text-9xl text-cyan-400`} />
           </CardSkill>
       </div>
     </section>
