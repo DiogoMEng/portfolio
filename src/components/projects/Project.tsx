@@ -1,6 +1,6 @@
 // import iconContactBook from '../../../static/img/contact-book.png';
 import { useEffect, useRef, useState } from 'react';
-import ProjectProtocol from '../../interfaces/propCard';
+import { ProjectProtocol } from '../../interfaces/propCard';
 import observationPosition from '../../utils/observationPosition';
 
 function Project (prop: ProjectProtocol): JSX.Element {
