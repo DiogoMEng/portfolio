@@ -1,15 +1,8 @@
 import { RiJavascriptFill } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi";
-import observationPosition from "../../utils/observationPosition";
-import { useEffect, useRef, useState } from "react";
 import CardSkill from "./CardSkill";
 
 const MainSkill = ():JSX.Element => {
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef(null);
-
-  useEffect(observationPosition(setIsVisible, cardRef, 0.7), []);
-
   return (
     <section className="p-5">
       <h1 className="text-4xl text-center font-bold max-sm:text-lg">
