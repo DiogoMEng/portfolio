@@ -1,10 +1,8 @@
 import { RiJavascriptFill } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
 import observationPosition from "../../utils/observationPosition";
 import { useEffect, useRef, useState } from "react";
 import CardSkill from "./CardSkill";
-import ButtonGithub from "./ButtonGithub";
 
 const MainSkill = ():JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);

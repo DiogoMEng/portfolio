@@ -1,6 +1,6 @@
-import PropCard from "../interfaces/propCard";
+import {ProjectProtocol} from "../interfaces/propCard";
 
-const data: PropCard[] = [
+const data: ProjectProtocol[] = [
     {
         projectName: 'Finances',
         projectLink: 'https://github.com/DiogoMEng/projetos-typescript/tree/main/finances',
