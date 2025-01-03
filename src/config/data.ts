@@ -1,4 +1,4 @@
-import PropCard from "../interfaces/Projects";
+import PropCard from "../interfaces/propCard";
 
 const data: PropCard[] = [
     {
