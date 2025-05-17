@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Linkedin, Github, Send, User, MessageSquare, Phone } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateName = (name: string) => {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
@@ -42,15 +45,11 @@ const Contact: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    
-    // Clear error when typing
     setFormErrors({ ...formErrors, [name]: '' });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate form
     const errors = {
       fullName: !validateName(formData.fullName) ? 'Nome não deve conter números ou caracteres especiais' : '',
       email: !validateEmail(formData.email) ? 'Email inválido' : '',
@@ -58,21 +57,47 @@ const Contact: React.FC = () => {
       subject: !validateSubject(formData.subject) ? 'Caracteres especiais permitidos: ?!.-$' : '',
       message: formData.message.trim() === '' ? 'Mensagem é obrigatória' : ''
     };
-    
     setFormErrors(errors);
-    
-    // Check if there are no errors
+
     if (!Object.values(errors).some(error => error)) {
-      // Form is valid
-      alert('Mensagem enviada com sucesso! (Simulação)');
-      // Reset form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
+      setIsSubmitting(true);
+      try {
+        const response = await fetch("https://dinastia-n8n-webhook.zsvbai.easypanel.host/webhook/5ccc81b9-8b9c-43f8-8191-d940e12730d4", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            fullName: formData.fullName,
+            email: formData.email,
+            phone: formData.phone,
+            subject: formData.subject,
+            message: formData.message
+          })
+        });
+
+        if (!response.ok) throw new Error('Falha ao enviar mensagem.');
+
+        toast({
+          title: "Mensagem enviada!",
+          description: "Sua mensagem foi enviada com sucesso.",
+        });
+
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } catch (error) {
+        toast({
+          title: "Falha ao enviar mensagem",
+          description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -160,6 +185,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     className={`${inputClasses} pl-10 ${formErrors.fullName ? 'border-destructive' : ''}`}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 {formErrors.fullName && <p className={errorClasses}>{formErrors.fullName}</p>}
@@ -176,6 +202,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     className={`${inputClasses} pl-10 ${formErrors.email ? 'border-destructive' : ''}`}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 {formErrors.email && <p className={errorClasses}>{formErrors.email}</p>}
@@ -192,6 +219,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     className={`${inputClasses} pl-10 ${formErrors.phone ? 'border-destructive' : ''}`}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 {formErrors.phone && <p className={errorClasses}>{formErrors.phone}</p>}
@@ -208,6 +236,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     className={`${inputClasses} pl-10 ${formErrors.subject ? 'border-destructive' : ''}`}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 {formErrors.subject && <p className={errorClasses}>{formErrors.subject}</p>}
@@ -222,6 +251,7 @@ const Contact: React.FC = () => {
                   rows={5}
                   className={`${inputClasses} ${formErrors.message ? 'border-destructive' : ''}`}
                   required
+                  disabled={isSubmitting}
                 ></textarea>
                 {formErrors.message && <p className={errorClasses}>{formErrors.message}</p>}
               </div>
@@ -229,8 +259,9 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-md hover:bg-primary/90 transition-colors font-medium"
+                disabled={isSubmitting}
               >
-                Enviar Mensagem
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 <Send size={18} />
               </button>
             </form>
@@ -242,3 +273,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
