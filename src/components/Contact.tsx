@@ -1,9 +1,10 @@
-
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Mail, Linkedin, Github, Send, User, MessageSquare, Phone } from 'lucide-react';
 import { toast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -33,8 +34,9 @@ const Contact: React.FC = () => {
   };
   
   const validatePhone = (phone: string) => {
-    const phoneRegex = /^\+55\s\d{2}\s9\d{8}$/;
-    return phoneRegex.test(phone);
+    const digits = phone.replace(/\D/g, '');
+    const regex = /^[1-9]{2}9\d{8}$/;
+    return regex.test(digits);
   };
   
   const validateSubject = (subject: string) => {
@@ -50,6 +52,9 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    /**
+     *  VALIDAÇÃO DOS CAMPOS DO FORMULÁRIO 
+     */
     const errors = {
       fullName: !validateName(formData.fullName) ? 'Nome não deve conter números ou caracteres especiais' : '',
       email: !validateEmail(formData.email) ? 'Email inválido' : '',
@@ -59,30 +64,18 @@ const Contact: React.FC = () => {
     };
     setFormErrors(errors);
 
-    if (!Object.values(errors).some(error => error)) {
-      setIsSubmitting(true);
-      try {
-        const response = await fetch("https://dinastia-n8n-webhook.zsvbai.easypanel.host/webhook/5ccc81b9-8b9c-43f8-8191-d940e12730d4", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            fullName: formData.fullName,
-            email: formData.email,
-            phone: formData.phone,
-            subject: formData.subject,
-            message: formData.message
-          })
-        });
-
-        if (!response.ok) throw new Error('Falha ao enviar mensagem.');
-
+    /**
+     *  CONFIGURA ENVIO DE EMAIL
+     */
+    emailjs
+      .sendForm('service_ouyqiyk', 'template_v85g11g', form.current, {
+        publicKey: 'gi_m8CINJrUBloSxu'
+      })
+      .then(() => {
         toast({
-          title: "Mensagem enviada!",
-          description: "Sua mensagem foi enviada com sucesso.",
+          title: "Mensagem enviada com sucesso!",
+          description: "Obrigado por entrar em contato. Responderemos em breve.",
         });
-
         setFormData({
           fullName: '',
           email: '',
@@ -90,15 +83,17 @@ const Contact: React.FC = () => {
           subject: '',
           message: ''
         });
-      } catch (error) {
+      })
+      .catch(() => {
         toast({
-          title: "Falha ao enviar mensagem",
-          description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+          title: "Erro ao enviar mensagem",
+          description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.",
         });
-      } finally {
+        return;
+      })
+      .finally(() => {
         setIsSubmitting(false);
-      }
-    }
+      });
   };
 
   const inputClasses = "w-full px-4 py-3 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all";
@@ -173,7 +168,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="md:col-span-7">
-            <form onSubmit={handleSubmit} className="bg-card p-6 rounded-lg shadow-sm space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="bg-card p-6 rounded-lg shadow-sm space-y-6">
               <div>
                 <div className="relative">
                   <User className="absolute left-3 top-3.5 text-muted-foreground" size={20} />
@@ -214,7 +209,7 @@ const Contact: React.FC = () => {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="Telefone (+55 DDD 9XXXXXXXX)"
+                    placeholder="Telefone (Ex: 91981234567)"
                     value={formData.phone}
                     onChange={handleChange}
                     className={`${inputClasses} pl-10 ${formErrors.phone ? 'border-destructive' : ''}`}
