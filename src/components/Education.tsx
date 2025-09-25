@@ -26,7 +26,7 @@ const Education: React.FC = () => {
                 <h3 className="text-xl font-bold">Engenharia da Computação</h3>
                 <p className="text-primary font-medium mb-2">Centro Universitário do Estado do Pará</p>
                 <p className="text-muted-foreground">
-                  Formação abrangente que combina princípios de engenharia com fundamentos da ciência da computação, capacitando para a criação de soluções tecnológicas inovadoras e eficientes.
+                  Formação que uniu fundamentos de computação e práticas de engenharia de software, com foco em desenvolvimento backend. Durante o curso, participei de projetos que transformaram problemas reais em soluções digitais eficientes, consolidando minha paixão por criar sistemas robustos e escaláveis.
                 </p>
                 
                 <div className="mt-4 inline-flex items-center gap-x-1.5 rounded-full px-3 py-1 text-sm font-medium bg-primary/20 dark:text-[#fdfdfd] text-black">
