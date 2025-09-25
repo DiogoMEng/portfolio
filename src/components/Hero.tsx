@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'Desenvolvedor Backend';
+  const fullText = 'Engenheiro de Software Backend';
   const typingSpeed = 100;
   const typingDelay = 1500;
 
@@ -67,10 +67,7 @@ const Hero: React.FC = () => {
               {typedText}
             </h2>
             <p className="text-muted-foreground max-w-lg">
-              Transformando lógica em soluções robustas. Especializado em arquiteturas
-              escaláveis, APIs de alto desempenho e bancos de dados otimizados. Meu foco
-              é construir a espinha dorsal de aplicações que suportam milhares de usuários,
-              mantendo segurança e eficiência.
+              Transformo lógica em soluções robustas e seguras, criando arquiteturas escaláveis, APIs de alto desempenho e bancos de dados otimizados. Meu propósito é desenvolver a espinha dorsal de sistemas que impactam milhares de pessoas, unindo eficiência técnica e visão estratégica para gerar valor em larga escala. Para mim, tecnologia só faz sentido quando conecta pessoas a soluções que realmente funcionam.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
