@@ -21,6 +21,9 @@ const INITIAL_FORM_ERRORS: ContactFormErrors = {
   message: '',
 };
 
+/**
+ * Style utility classes for inputs and error messages
+ */
 const inputClasses =
   'w-full px-4 py-3 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all';
 const errorClasses = 'text-destructive text-sm mt-1';
@@ -31,12 +34,23 @@ const Contact: React.FC = () => {
   const [formErrors, setFormErrors] = useState<ContactFormErrors>(INITIAL_FORM_ERRORS);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  /**
+   *  Generic handler for changes in inputs/textarea: 
+   *  --> updates state and clears field error 
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement;
     setFormData((prev) => ({ ...prev, [name]: value }) as ContactFormData);
     setFormErrors((prev) => ({ ...prev, [name]: '' } as ContactFormErrors));
   };
 
+  /**
+   * Form submission:
+   * - Validates data
+   * - If OK, instantiates email service and sends
+   * - Displays success/error toasts
+   * - Resets the form upon successful completion 
+   */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -67,6 +81,9 @@ const Contact: React.FC = () => {
         description: 'Obrigado por entrar em contato. Responderemos em breve.',
       });
 
+      /**
+       * Reset form state and clear inputs 
+       */
       setFormData(INITIAL_FORM_DATA);
       setFormErrors(INITIAL_FORM_ERRORS);
       formRef.current.reset();
