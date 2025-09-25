@@ -55,9 +55,9 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     try {
       const emailService = EmailServiceFactory.createEmailJs({
-        serviceId: 'service_ouyqiyk',
-        templateId: 'template_v85g11g',
-        publicKey: 'gi_m8CINJrUBloSxu',
+        serviceId: import.meta.env.VITE_SERVICE_ID,
+        templateId: import.meta.env.VITE_TEMPLATE_ID,
+        publicKey: import.meta.env.VITE_PUBLIC_KEY,
       });
 
       await emailService.sendContact(formRef.current);
