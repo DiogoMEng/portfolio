@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
 import { Github } from 'lucide-react';
+import backgroundAdotai from './img/background_projeto_adotai.png';
+import backgroundValidador from './img/background_projeto_validadorFormulario.png';
+import backgroundToughts from './img/background_projeto_toughts.png';
 
 interface Project {
   id: number;
@@ -36,24 +39,24 @@ const Projects: React.FC = () => {
       title: 'Toughts',
       description: 'O projeto desenvolvido duranto o cursor da Udemy busca apresentar um blog onde usuários podem compartilhar seus pensamentos. A criação do projeto buscou aplicar os conceitos abordados durante o curso de NodeJS e as principais ferramentes utilizadas em aplicações reais.',
       stack: ['JavaScript', 'Node.js', 'Express', 'MySQL', 'Sequelize'],
-      github: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/Tougths',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80'
+      github: 'https://l1nq.com/SPcL8',
+      image: backgroundToughts
     },
     {
       id: 4,
-      title: 'Finances',
-      description: 'Aplicação web de gestão financeira que facilita o controle de receitas e despesas, com relatórios claros para uma visão completa dos gastos e saldo. Ideal para organizar suas finanças e tomar decisões mais inteligentes sobre seu dinheiro.',
-      stack: ['TypeScript', 'Node.js', 'Express', 'MySQL', 'Sequelize'],
-      github: 'https://github.com/DiogoMEng/projetos-typescript/tree/main/finances',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80'
+      title: 'Adotaí',
+      description: 'O Adotai é uma API RESTful desenvolvida para facilitar o processo de adoção de animais de estimação. O sistema permite que usuários cadastrem pets para adoção, agendem visitas, gerenciem perfis e finalizem processos de adoção de forma segura e organizada.',
+      stack: ['TypeScript', 'Node.js', 'MongoDB', 'Mongoose', 'JWT', 'Bcrypt'],
+      github: 'https://sl1nk.com/SV8tP',
+      image: backgroundAdotai
     },
     {
       id: 5,
       title: 'Validador de Formulários',
       description: 'Validação em tempo real para garantir precisão e segurança. Este validador de formulários, desenvolvido com TypeScript, verifica as entradas do usuário no momento, proporcionando feedback instantâneo e prevenindo erros. A solução assegura dados consistentes e corretos, melhorando a experiência do usuário e a eficiência de sistemas que dependem dessas informações.',
       stack: ['TypeScript', 'Webpack', 'Validator', 'Eslint'],
-      github: 'https://github.com/DiogoMEng/projetos-typescript/tree/main/formValidator',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80'
+      github: 'https://sl1nk.com/HoeHE',
+      image: backgroundValidador
     }
   ];
 
