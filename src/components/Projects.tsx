@@ -4,6 +4,7 @@ import { Github } from 'lucide-react';
 import backgroundAdotai from './img/background_projeto_adotai.png';
 import backgroundValidador from './img/background_projeto_validadorFormulario.png';
 import backgroundToughts from './img/background_projeto_toughts.png';
+import backgroundCaixaUp from './img/background_projeto_caixaUp.png';
 
 interface Project {
   id: number;
@@ -20,22 +21,6 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'API RESTful',
-      description: 'Segurança e eficiência no gerenciamento de cadastros de alunos. Este projeto simula um sistema de cadastro com MariaDB, usando uma API organizada pela arquitetura MVC. Ele permite criar, ler, atualizar e excluir registros, com rotas protegidas que garantem acesso apenas a usuários autenticados, focando em escalabilidade e fácil manutenção.',
-      stack: ['JavaScript', 'Node.js', 'Express', 'MySQL', 'Sequelize', 'JsonWebToken', 'EsLint'],
-      github: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/api_rest',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 2,
-      title: 'Agenda Contatos',
-      description: 'Agenda de contatos que permite armazenar, gerenciar e organizar informações de forma prática. Usuários podem adicionar, editar e remover contatos com facilidade, mantendo dados como nome, telefone, e-mail e endereço sempre atualizados. A interface intuitiva garante acesso rápido e eficiente aos seus contatos.',
-      stack: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'EJS', 'Validator', 'Webpack'],
-      github: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/agendaContatos',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      id: 3,
       title: 'Toughts',
       description: 'O projeto desenvolvido duranto o cursor da Udemy busca apresentar um blog onde usuários podem compartilhar seus pensamentos. A criação do projeto buscou aplicar os conceitos abordados durante o curso de NodeJS e as principais ferramentes utilizadas em aplicações reais.',
       stack: ['JavaScript', 'Node.js', 'Express', 'MySQL', 'Sequelize'],
@@ -43,7 +28,7 @@ const Projects: React.FC = () => {
       image: backgroundToughts
     },
     {
-      id: 4,
+      id: 2,
       title: 'Adotaí',
       description: 'O Adotai é uma API RESTful desenvolvida para facilitar o processo de adoção de animais de estimação. O sistema permite que usuários cadastrem pets para adoção, agendem visitas, gerenciem perfis e finalizem processos de adoção de forma segura e organizada.',
       stack: ['TypeScript', 'Node.js', 'MongoDB', 'Mongoose', 'JWT', 'Bcrypt'],
@@ -51,7 +36,31 @@ const Projects: React.FC = () => {
       image: backgroundAdotai
     },
     {
+      id: 3,
+      title: 'CaixaUp',
+      description: 'O Finances Backend API é um sistema de gerenciamento financeiro que permite aos usuários controlar suas finanças pessoais ou empresariais. O sistema oferece funcionalidades para cadastro de usuários, criação de categorias de despesas/receitas, gerenciamento de caixas (contas) e registro de transações financeiras. Utiliza uma arquitetura RESTful com autenticação JWT para garantir a segurança dos dados.',
+      stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'JWT', 'Bcrypt'],
+      github: 'https://l1nq.com/aJsDH',
+      image: backgroundCaixaUp
+    },
+    {
+      id: 4,
+      title: 'API RESTful',
+      description: 'Segurança e eficiência no gerenciamento de cadastros de alunos. Este projeto simula um sistema de cadastro com MariaDB, usando uma API organizada pela arquitetura MVC. Ele permite criar, ler, atualizar e excluir registros, com rotas protegidas que garantem acesso apenas a usuários autenticados, focando em escalabilidade e fácil manutenção.',
+      stack: ['JavaScript', 'Node.js', 'Express', 'MySQL', 'Sequelize', 'JsonWebToken', 'EsLint'],
+      github: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/api_rest',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80'
+    },
+    {
       id: 5,
+      title: 'Agenda Contatos',
+      description: 'Agenda de contatos que permite armazenar, gerenciar e organizar informações de forma prática. Usuários podem adicionar, editar e remover contatos com facilidade, mantendo dados como nome, telefone, e-mail e endereço sempre atualizados. A interface intuitiva garante acesso rápido e eficiente aos seus contatos.',
+      stack: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'EJS', 'Validator', 'Webpack'],
+      github: 'https://github.com/DiogoMEng/projetos-javascript/tree/main/agendaContatos',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id: 6,
       title: 'Validador de Formulários',
       description: 'Validação em tempo real para garantir precisão e segurança. Este validador de formulários, desenvolvido com TypeScript, verifica as entradas do usuário no momento, proporcionando feedback instantâneo e prevenindo erros. A solução assegura dados consistentes e corretos, melhorando a experiência do usuário e a eficiência de sistemas que dependem dessas informações.',
       stack: ['TypeScript', 'Webpack', 'Validator', 'Eslint'],

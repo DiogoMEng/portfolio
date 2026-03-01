@@ -1,9 +1,9 @@
-
+import perfil from './img/perfil.png';
 import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'Engenheiro de Software Backend';
+  const fullText = 'Desenvolvedor Backend Júnior';
   const typingSpeed = 100;
   const typingDelay = 1500;
 
@@ -88,9 +88,9 @@ const Hero: React.FC = () => {
             <div className="relative w-full aspect-square max-w-md mx-auto animate-scale">
               <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
-                  alt="Código de desenvolvimento backend"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  src={perfil}
+                  alt="perfil"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
